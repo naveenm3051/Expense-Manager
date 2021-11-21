@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        {% block body %}
+        <div class="container">
+            <div class = "row">
+                {% for book in books %}
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img style = "width: 288px; height:300px;" class="card-img-top" src="{{book.cover}}" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">{{book.name}}</h5>
+                          <p class="card-text">by {{book.author}}</p>
+                          <a href="#" class="btn btn-warning">Buy</a>
+                        </div>
+                      </div> 
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endblock %}               
+    </body>
+</html>
+
+
+ 
+
+    
